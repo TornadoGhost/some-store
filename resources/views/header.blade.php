@@ -230,10 +230,17 @@
                 <div class="header__account header__sticky--none">
                     <ul class="header__account--wrapper d-flex align-items-center">
                         <li class="header__account--items d-none d-lg-block">
-                            <a class="header__account--btn" href="my-account.html">
+                                <a class="header__account--btn" href="
+                                @if(Auth::check())
+                                my-account.html
+                                @else
+                                somethingelse.html
+                                @endif
+                                ">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" -user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                 <span class="visually-hidden">My account</span>
                             </a>
+
                         </li>
                         <li class="header__account--items  header__account--search__items mobile__d--block d-sm-2-none">
                             <a class="header__account--btn search__open--btn" href="javascript:void(0)" data-offcanvas>
