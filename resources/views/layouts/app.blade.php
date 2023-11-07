@@ -6,27 +6,34 @@
     <title>Partsix - Auto Parts & Car Accessories Shop HTML Template</title>
     <meta name="description" content="Morden Bootstrap HTML5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- ======= All CSS Plugins here ======== -->
-    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css">
+    <link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/plugins/glightbox.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
 
     <!-- Plugin css -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
 
     <!-- Custom Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-@include('header');
-@include('main');
-@include('footer');
+
+<header class="header__section mb-20">
+    @include('layouts.header')
+</header>
+<main class="main__content_wrapper">
+    @yield('main')
+</main>
+<footer>
+    @include('layouts.footer')
+</footer>
 
 <!-- Start preloader -->
 <div id="preloader">
@@ -86,13 +93,13 @@
                                     <div class="product__media--preview__items">
                                         <a class="product__media--preview__items--link glightbox"
                                            data-gallery="product-media-preview"
-                                           href="assets/img/product/big-product/product1.webp"><img
+                                           href="img/product/big-product/product1.webp"><img
                                                 class="product__media--preview__items--img"
-                                                src="assets/img/product/big-product/product1.webp"
+                                                src="img/product/big-product/product1.webp"
                                                 alt="product-media-img"></a>
                                         <div class="product__media--view__icon">
                                             <a class="product__media--view__icon--link glightbox"
-                                               href="assets/img/product/big-product/product1.webp"
+                                               href="img/product/big-product/product1.webp"
                                                data-gallery="product-media-preview">
                                                 <svg class="product__items--action__btn--svg"
                                                      xmlns="http://www.w3.org/2000/svg" width="22.51" height="22.443"
@@ -114,13 +121,13 @@
                                     <div class="product__media--preview__items">
                                         <a class="product__media--preview__items--link glightbox"
                                            data-gallery="product-media-preview"
-                                           href="assets/img/product/big-product/product2.webp"><img
+                                           href="img/product/big-product/product2.webp"><img
                                                 class="product__media--preview__items--img"
-                                                src="assets/img/product/big-product/product2.webp"
+                                                src="img/product/big-product/product2.webp"
                                                 alt="product-media-img"></a>
                                         <div class="product__media--view__icon">
                                             <a class="product__media--view__icon--link glightbox"
-                                               href="assets/img/product/big-product/product2.webp"
+                                               href="img/product/big-product/product2.webp"
                                                data-gallery="product-media-preview">
                                                 <svg class="product__items--action__btn--svg"
                                                      xmlns="http://www.w3.org/2000/svg" width="22.51" height="22.443"
@@ -142,13 +149,13 @@
                                     <div class="product__media--preview__items">
                                         <a class="product__media--preview__items--link glightbox"
                                            data-gallery="product-media-preview"
-                                           href="assets/img/product/big-product/product3.webp"><img
+                                           href="img/product/big-product/product3.webp"><img
                                                 class="product__media--preview__items--img"
-                                                src="assets/img/product/big-product/product3.webp"
+                                                src="img/product/big-product/product3.webp"
                                                 alt="product-media-img"></a>
                                         <div class="product__media--view__icon">
                                             <a class="product__media--view__icon--link glightbox"
-                                               href="assets/img/product/big-product/product3.webp"
+                                               href="img/product/big-product/product3.webp"
                                                data-gallery="product-media-preview">
                                                 <svg class="product__items--action__btn--svg"
                                                      xmlns="http://www.w3.org/2000/svg" width="22.51" height="22.443"
@@ -170,13 +177,13 @@
                                     <div class="product__media--preview__items">
                                         <a class="product__media--preview__items--link glightbox"
                                            data-gallery="product-media-preview"
-                                           href="assets/img/product/big-product/product4.webp"><img
+                                           href="img/product/big-product/product4.webp"><img
                                                 class="product__media--preview__items--img"
-                                                src="assets/img/product/big-product/product4.webp"
+                                                src="img/product/big-product/product4.webp"
                                                 alt="product-media-img"></a>
                                         <div class="product__media--view__icon">
                                             <a class="product__media--view__icon--link glightbox"
-                                               href="assets/img/product/big-product/product4.webp"
+                                               href="img/product/big-product/product4.webp"
                                                data-gallery="product-media-preview">
                                                 <svg class="product__items--action__btn--svg"
                                                      xmlns="http://www.w3.org/2000/svg" width="22.51" height="22.443"
@@ -201,31 +208,31 @@
                                 <div class="swiper-slide">
                                     <div class="product__media--nav__items">
                                         <img class="product__media--nav__items--img"
-                                             src="assets/img/product/small-product/product1.webp" alt="product-nav-img">
+                                             src="img/product/small-product/product1.webp" alt="product-nav-img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="product__media--nav__items">
                                         <img class="product__media--nav__items--img"
-                                             src="assets/img/product/small-product/product2.webp" alt="product-nav-img">
+                                             src="img/product/small-product/product2.webp" alt="product-nav-img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="product__media--nav__items">
                                         <img class="product__media--nav__items--img"
-                                             src="assets/img/product/small-product/product3.webp" alt="product-nav-img">
+                                             src="img/product/small-product/product3.webp" alt="product-nav-img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="product__media--nav__items">
                                         <img class="product__media--nav__items--img"
-                                             src="assets/img/product/small-product/product3.webp" alt="product-nav-img">
+                                             src="img/product/small-product/product3.webp" alt="product-nav-img">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="product__media--nav__items">
                                         <img class="product__media--nav__items--img"
-                                             src="assets/img/product/small-product/product4.webp" alt="product-nav-img">
+                                             src="img/product/small-product/product4.webp" alt="product-nav-img">
                                     </div>
                                 </div>
                             </div>
@@ -320,28 +327,28 @@
                                                 <input id="color-red1" name="color" type="radio" checked>
                                                 <label class="variant__color--value red" for="color-red1"
                                                        title="Red"><img class="variant__color--value__img"
-                                                                        src="assets/img/product/small-product/product1.webp"
+                                                                        src="img/product/small-product/product1.webp"
                                                                         alt="variant-color-img"></label>
                                             </div>
                                             <div class="variant__color--list">
                                                 <input id="color-red2" name="color" type="radio">
                                                 <label class="variant__color--value red" for="color-red2" title="Black"><img
                                                         class="variant__color--value__img"
-                                                        src="assets/img/product/small-product/product2.webp"
+                                                        src="img/product/small-product/product2.webp"
                                                         alt="variant-color-img"></label>
                                             </div>
                                             <div class="variant__color--list">
                                                 <input id="color-red3" name="color" type="radio">
                                                 <label class="variant__color--value red" for="color-red3"
                                                        title="Pink"><img class="variant__color--value__img"
-                                                                         src="assets/img/product/small-product/product3.webp"
+                                                                         src="img/product/small-product/product3.webp"
                                                                          alt="variant-color-img"></label>
                                             </div>
                                             <div class="variant__color--list">
                                                 <input id="color-red4" name="color" type="radio">
                                                 <label class="variant__color--value red" for="color-red4"
                                                        title="Orange"><img class="variant__color--value__img"
-                                                                           src="assets/img/product/small-product/product4.webp"
+                                                                           src="img/product/small-product/product4.webp"
                                                                            alt="variant-color-img"></label>
                                             </div>
                                         </div>
@@ -458,7 +465,7 @@
 <!-- Quickview Wrapper End -->
 
 <!-- Start News letter popup -->
-<div class="newsletter__popup" data-animation="slideInUp">
+{{--<div class="newsletter__popup" data-animation="slideInUp">
     <div id="boxes" class="newsletter__popup--inner">
         <button class="newsletter__popup--close__btn" aria-label="search close button">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
@@ -469,7 +476,7 @@
         <div class="box newsletter__popup--box d-flex align-items-center">
             <div class="newsletter__popup--thumbnail">
                 <img class="newsletter__popup--thumbnail__img display-block"
-                     src="assets/img/banner/newsletter-popup-thumb2.webp" alt="newsletter-popup-thumb">
+                     src="img/banner/newsletter-popup-thumb2.webp" alt="newsletter-popup-thumb">
             </div>
             <div class="newsletter__popup--box__right">
                 <h2 class="newsletter__popup--title">Join Our Newsletter</h2>
@@ -492,7 +499,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>--}}
 <!-- End News letter popup -->
 
 <!-- Scroll top bar -->
@@ -504,13 +511,15 @@
 </button>
 
 <!-- All Script JS Plugins here  -->
-<script src="assets/js/vendor/popper.js" defer="defer"></script>
-<script src="assets/js/vendor/bootstrap.min.js" defer="defer"></script>
-<script src="assets/js/plugins/swiper-bundle.min.js"></script>
-<script src="assets/js/plugins/glightbox.min.js"></script>
+<script src="js/vendor/popper.js" defer="defer"></script>
+<script src="js/vendor/bootstrap.min.js" defer="defer"></script>
+<script src="js/plugins/swiper-bundle.min.js"></script>
+<script src="js/plugins/glightbox.min.js"></script>
 
 <!-- Customscript js -->
-<script src="assets/js/script.js"></script>
+<script src="js/script.js"></script>
+{{--<script src="js/test.js"></script>--}}
+<script src="js/app.js"></script>
 
 </body>
 </html>
