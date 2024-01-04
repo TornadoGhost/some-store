@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\RegisterController as RegisterControllerAlias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/', function () {
     return view('index');
 });
+
+Route::post('/register', [RegisterControllerAlias::class, 'store'])->name('auth.reg');

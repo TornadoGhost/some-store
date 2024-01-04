@@ -8,7 +8,7 @@
                 <div class="swiper-slide ">
                     <div class="hero__slider--items home1-slider1-bg">
                         <div class="slider__content">
-                            <span class="slider__subtitle text__secondary">2022 Collections</span>
+                            <span class="slider__subtitle text__secondary">2022 Collections {{ route('auth.reg') }}</span>
                             <h2 class="slider__maintitle h1">Wheelss <br> <span class="slider__maintitle--inner__text">Body Part</span>
                             </h2>
                             <span class="slider__price--text text__secondary">415.00/$</span>

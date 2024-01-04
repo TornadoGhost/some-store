@@ -6,6 +6,7 @@
     <title>Partsix - Auto Parts & Car Accessories Shop HTML Template</title>
     <meta name="description" content="Morden Bootstrap HTML5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+{{--    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- ======= All CSS Plugins here ======== -->
@@ -20,6 +21,7 @@
 
     <!-- Custom Style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    @routes
 
 </head>
 
@@ -518,7 +520,6 @@
 
 <!-- Customscript js -->
 <script src="js/script.js"></script>
-{{--<script src="js/test.js"></script>--}}
 <script src="js/app.js"></script>
 
 </body>
