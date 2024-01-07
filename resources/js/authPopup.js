@@ -2,8 +2,8 @@
     document.addEventListener('click', function (e) {
         switch (e.target) {
             case document.querySelector('.header__account--btn'):
-                const backdrop = modal('Login', loginForm());
-                document.body.appendChild(backdrop);
+                const loginModal = modal('Login', loginForm());
+                document.body.appendChild(loginModal);
                 break;
 
             case document.querySelector('.backdrop__close'):
@@ -24,7 +24,7 @@
 
                     const modalContent = document.querySelector('.backdrop__modal-content');
                     if (modalContent) {
-                        modalContent.appendChild(registrationForm());
+                        modalContent.insertBefore(registrationForm(), modalContent.firstChild);
                     }
                 }
                 break;
@@ -75,8 +75,21 @@
         const modalContent = document.createElement('div');
         modalContent.className = 'backdrop__modal-content';
 
+        const modalAuthLabel = document.createElement('p');
+        modalAuthLabel.className = 'backdrop__socials-label';
+        modalAuthLabel.textContent = 'Login as a user';
+        const modalAuthSocials = document.createElement('div');
+        modalAuthSocials.className = 'backdrop__auth-socials'
+        const modalAuthSocialsButtons = document.createElement('div');
+        modalAuthSocialsButtons.className = 'backdrop__socials-buttons';
+        modalAuthSocialsButtons.append(
+            createButton('Facebook', 'button', 'button button--large button--gray backdrop__socials-button'),
+            createButton('Google', 'button', 'button button--large button--gray backdrop__socials-button'),
+        );
+        modalAuthSocials.append(modalAuthLabel, modalAuthSocialsButtons);
+
         modalHeader.append(header3, buttonClose);
-        modalContent.appendChild(form);
+        modalContent.append(form, modalAuthSocials);
         modal.append(modalHeader, modalContent);
         backdrop.appendChild(modal)
 
@@ -102,12 +115,16 @@
         formBottom.className = 'backdrop__form-bottom';
 
         const submitButton = document.createElement('button');
-        submitButton.className = 'backdrop__submit';
+        submitButton.className = 'button button--large button--green backdrop__submit';
         submitButton.textContent = 'Sign in';
 
         const registerButton = document.createElement('button');
-        registerButton.className = 'backdrop__register';
+        registerButton.className = 'button button--link backdrop__register';
         registerButton.textContent = 'Sign up';
+
+        const authDivider = document.createElement('p');
+        authDivider.className = 'backdrop__auth-divider';
+        authDivider.textContent = 'or';
 
         formBottom.append(submitButton, registerButton);
         fieldset.appendChild(formBottom);
@@ -134,12 +151,12 @@
         formBottom.className = 'backdrop__form-bottom';
 
         const submit = document.createElement('button');
-        submit.className = 'backdrop__submit';
+        submit.className = 'button button--large button--green backdrop__submit';
         submit.type = 'submit';
         submit.textContent = 'Submit';
 
         const logButton = document.createElement('button');
-        logButton.className = 'backdrop__register-link';
+        logButton.className = 'button button--link backdrop__register-link';
         logButton.type = 'button';
         logButton.textContent = 'I am already registered';
 
