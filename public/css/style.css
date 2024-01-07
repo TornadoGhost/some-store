@@ -11362,6 +11362,47 @@ details > summary::-webkit-details-marker {
   }
 }
 
+.button {
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: center;
+}
+.button--large {
+  font-size: 18px;
+  height: 48px;
+}
+.button--green {
+  background-color: #00a046;
+  color: #fff;
+}
+.button--gray {
+  background-color: #f5f5f5;
+  box-shadow: inset 0 0 0 1px #ebebeb;
+  color: #3e77aa;
+}
+.button--with-icon {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.button--link {
+  background: none;
+  border: none;
+  color: #3e77aa;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -11379,6 +11420,8 @@ details > summary::-webkit-details-marker {
   width: 592px;
   border-radius: 8px;
   background-color: #fff;
+  height: auto;
+  overflow: hidden;
 }
 .backdrop__modal-header {
   display: flex;
@@ -11397,7 +11440,11 @@ details > summary::-webkit-details-marker {
   background-color: transparent;
 }
 .backdrop__modal-content {
+  display: flex;
+  flex-direction: row;
   padding: 24px;
+  max-height: 100%;
+  overflow-y: auto;
 }
 .backdrop__button {
   display: block;
@@ -11408,12 +11455,10 @@ details > summary::-webkit-details-marker {
   margin-bottom: 4px;
   font-size: 12px;
   color: #797878;
+  line-height: 16.8px;
 }
 .backdrop__form-bottom {
   margin-top: 16px;
-}
-.backdrop__form-bottom button:not(:last-child) {
-  margin-right: 10px;
 }
 .backdrop input {
   border: 1px solid #a6a5a5;
@@ -11421,6 +11466,48 @@ details > summary::-webkit-details-marker {
 }
 .backdrop.validation_type_error input {
   border-color: red;
+}
+.backdrop__login-form {
+  width: 60%;
+  padding-right: 32px;
+  border-right: 1px solid #e9e9e9;
+}
+.backdrop__auth-socials {
+  width: 40%;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.backdrop__socials-label {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #797878;
+}
+.backdrop__socials-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.backdrop__socials-button:not(:first-child) {
+  margin-top: 16px;
+}
+.backdrop__form-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.backdrop__submit {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.backdrop__form-row input:not([type=checkbox]):not([type=radio]) {
+  width: 100%;
+}
+.backdrop__form-row:not(:first-child) {
+  margin-top: 16px;
+}
+.backdrop__registration-form {
+  width: 60%;
 }
 
 .validation_type_error input,
