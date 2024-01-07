@@ -28,7 +28,7 @@
           form.remove();
           var modalContent = document.querySelector('.backdrop__modal-content');
           if (modalContent) {
-            modalContent.appendChild(registrationForm());
+            modalContent.insertBefore(registrationForm(), modalContent.firstChild);
           }
         }
         break;
@@ -70,8 +70,17 @@
     buttonClose.textContent = 'Close';
     var modalContent = document.createElement('div');
     modalContent.className = 'backdrop__modal-content';
+    var modalAuthLabel = document.createElement('p');
+    modalAuthLabel.className = 'backdrop__socials-label';
+    modalAuthLabel.textContent = 'Login as a user';
+    var modalAuthSocials = document.createElement('div');
+    modalAuthSocials.className = 'backdrop__auth-socials';
+    var modalAuthSocialsButtons = document.createElement('div');
+    modalAuthSocialsButtons.className = 'backdrop__socials-buttons';
+    modalAuthSocialsButtons.append(createButton('Facebook', 'button', 'button button--large button--gray backdrop__socials-button'), createButton('Google', 'button', 'button button--large button--gray backdrop__socials-button'));
+    modalAuthSocials.append(modalAuthLabel, modalAuthSocialsButtons);
     modalHeader.append(header3, buttonClose);
-    modalContent.appendChild(form);
+    modalContent.append(form, modalAuthSocials);
     modal.append(modalHeader, modalContent);
     backdrop.appendChild(modal);
     return backdrop;
@@ -87,11 +96,14 @@
     var formBottom = document.createElement('div');
     formBottom.className = 'backdrop__form-bottom';
     var submitButton = document.createElement('button');
-    submitButton.className = 'backdrop__submit';
+    submitButton.className = 'button button--large button--green backdrop__submit';
     submitButton.textContent = 'Sign in';
     var registerButton = document.createElement('button');
-    registerButton.className = 'backdrop__register';
+    registerButton.className = 'button button--link backdrop__register';
     registerButton.textContent = 'Sign up';
+    var authDivider = document.createElement('p');
+    authDivider.className = 'backdrop__auth-divider';
+    authDivider.textContent = 'or';
     formBottom.append(submitButton, registerButton);
     fieldset.appendChild(formBottom);
     form.appendChild(fieldset);
@@ -105,11 +117,11 @@
     var formBottom = document.createElement('div');
     formBottom.className = 'backdrop__form-bottom';
     var submit = document.createElement('button');
-    submit.className = 'backdrop__submit';
+    submit.className = 'button button--large button--green backdrop__submit';
     submit.type = 'submit';
     submit.textContent = 'Submit';
     var logButton = document.createElement('button');
-    logButton.className = 'backdrop__register-link';
+    logButton.className = 'button button--link backdrop__register-link';
     logButton.type = 'button';
     logButton.textContent = 'I am already registered';
     for (var i = 0; i < formInputs.length; i++) {
