@@ -11,8 +11,8 @@
   document.addEventListener('click', function (e) {
     switch (e.target) {
       case document.querySelector('.header__account--btn'):
-        var backdrop = modal('Login', loginForm());
-        document.body.appendChild(backdrop);
+        var loginModal = modal('Login', loginForm());
+        document.body.appendChild(loginModal);
         break;
       case document.querySelector('.backdrop__close'):
         document.querySelector('.backdrop').remove();
