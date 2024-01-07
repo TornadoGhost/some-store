@@ -210,4 +210,13 @@
 
         return formRow;
     }
+
+    function createButton(text, type, className) {
+        const button = document.createElement('button');
+        button.textContent = text;
+        button.type = type;
+        button.className = className;
+
+        return button;
+    }
 })();
