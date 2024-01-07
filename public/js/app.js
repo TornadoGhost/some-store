@@ -167,6 +167,13 @@
     formRow.innerHTML += label.outerHTML + input.outerHTML + validationBlock.outerHTML;
     return formRow;
   }
+  function createButton(text, type, className) {
+    var button = document.createElement('button');
+    button.textContent = text;
+    button.type = type;
+    button.className = className;
+    return button;
+  }
 })();
 
 /***/ }),
