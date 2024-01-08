@@ -38,7 +38,7 @@
 
                     const modalContent = document.querySelector('.backdrop__modal-content');
                     if (modalContent) {
-                        modalContent.appendChild(loginForm());
+                        modalContent.insertBefore(loginForm(), modalContent.firstChild);
                     }
                 }
                 break;
