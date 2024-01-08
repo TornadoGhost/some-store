@@ -40,7 +40,7 @@
           registerForm.remove();
           var _modalContent = document.querySelector('.backdrop__modal-content');
           if (_modalContent) {
-            _modalContent.appendChild(loginForm());
+            _modalContent.insertBefore(loginForm(), _modalContent.firstChild);
           }
         }
         break;
