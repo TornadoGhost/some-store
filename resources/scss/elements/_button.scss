@@ -10,6 +10,15 @@
     position: relative;
     text-align: center;
 
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px #6fc4e5;
+        z-index: 1;
+    }
+
     &--large {
         font-size: 18px;
         height: 48px;
@@ -17,6 +26,11 @@
 
     &--green {
         background-color: #00a046;
+        color: #fff;
+    }
+
+    &--green:hover {
+        background-color: #00bc52;
         color: #fff;
     }
 

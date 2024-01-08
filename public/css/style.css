@@ -288,6 +288,23 @@ textarea {
   transition: var(--transition);
 }
 
+input {
+  background-color: #fff;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid #d2d2d2;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+  height: 40px;
+}
+
+input:not([type=checkbox]):not([type=radio]):focus, textarea:focus {
+  box-shadow: 0 0 0 2px #6fc4e5;
+  z-index: 1;
+}
+
 *:focus {
   outline: none;
   box-shadow: none;
@@ -11374,12 +11391,23 @@ details > summary::-webkit-details-marker {
   position: relative;
   text-align: center;
 }
+.button:hover {
+  text-decoration: none;
+}
+.button:focus {
+  box-shadow: 0 0 0 2px #6fc4e5;
+  z-index: 1;
+}
 .button--large {
   font-size: 18px;
   height: 48px;
 }
 .button--green {
   background-color: #00a046;
+  color: #fff;
+}
+.button--green:hover {
+  background-color: #00bc52;
   color: #fff;
 }
 .button--gray {
@@ -11488,6 +11516,10 @@ details > summary::-webkit-details-marker {
   display: flex;
   flex-direction: column;
 }
+.backdrop__socials-button:hover {
+  background-color: #f5f5f5;
+  color: #4096e3;
+}
 .backdrop__socials-button:not(:first-child) {
   margin-top: 16px;
 }
@@ -11508,6 +11540,8 @@ details > summary::-webkit-details-marker {
 }
 .backdrop__registration-form {
   width: 60%;
+  padding-right: 32px;
+  border-right: 1px solid #e9e9e9;
 }
 
 .validation_type_error input,
